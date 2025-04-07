@@ -9,12 +9,20 @@ import os
 app = Flask(__name__)
 CORS(app)  # Allow React/React Native to connect
 
-# MySQL Config (XAMPP Defaults)
-app.config['MYSQL_HOST'] = 'localhost'
+# # MySQL Config (XAMPP Defaults)
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = ''
+# app.config['MYSQL_DB'] = 'library_management_system'
+# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'  # This is the key change
+
+app.config['MYSQL_HOST'] = 'ballast.proxy.rlwy.net'
+app.config['MYSQL_PORT'] = 23387
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'library_management_system'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'  # This is the key change
+app.config['MYSQL_PASSWORD'] = 'QBtSdGVeovggNCFUymzMqjElIqrIlDyU'
+app.config['MYSQL_DB'] = 'railway'
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
 
 mysql = MySQL(app)
 
