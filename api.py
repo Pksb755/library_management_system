@@ -26,8 +26,8 @@ LIBRARIANS = {
 
 
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate("library-management-syste-ae8eb-firebase-adminsdk-fbsvc-98cdc23c65.json")
-firebase_admin.initialize_app(cred)
+# cred = credentials.Certificate("library-management-syste-ae8eb-firebase-adminsdk-fbsvc-98cdc23c65.json")
+# firebase_admin.initialize_app(cred)
 
 
 
