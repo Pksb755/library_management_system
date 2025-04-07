@@ -1,3 +1,15 @@
+# React
+frontend/node_modules/
+frontend/build/
+
+# Flask
+backend/__pycache__/
+backend/instance/
+*.pyc
+.env
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
