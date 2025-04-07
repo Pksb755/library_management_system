@@ -48,6 +48,18 @@ def calculate_status(quantity):
         return 'Out of Stock'
 
 
+@app.route('/test-db')
+def test_db():
+    try:
+        cur = mysql.connection.cursor()
+        cur.execute("SHOW TABLES")
+        tables = cur.fetchall()
+        return jsonify({'status': 'success', 'tables': tables})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)})
+
+
+
 @app.route('/dashboard-stats', methods=['GET'])
 def get_dashboard_stats():
     try:
